@@ -34,4 +34,15 @@
    Para esse projeto, serão necessárias apenas as bibliotecas [Adafruit_HTU21DF](https://github.com/adafruit/Adafruit_HTU21DF_Library/archive/master.zip) e [Nanofox](https://github.com/Gridya/nanofox). Sem a biblioteca Adafruit_HTU21DF não conseguiríamos realizar as leituras do nossso sensor e sem a biblioteca Nanofox não conseguiriamos trasmitir nossos dados.
    #### Função Setup
    Em nosso setup, realizamos todas as inicializações necessárias, que vão desde o Arduino Nano IO até as referências de tempo que serão usadas mais tarde. Além disso, também programamos algumas mensagens para serem exibidas no monitor serial (também inicializado na função).
+   #### Função Loop 
+   Em nossa função loop, temos o monitoramento constante da temperatura e umidade (mais detalhes a seguir) e trabalhamos com algumas referências de tempo para que o programa envie dados para a plataforma Tago a cada 15 minutos e também realize leituras do ambiente de 1 em 1 segundo.
+   #### Função Build_Uplink_Msg
+   Essa função é chamada a cada 15 minutos, no momento em se iniciará uma transmissão para a rede Sigfox. Para transmitirmos nossos dados, eles devem estar "construídos" em uma mensagem apta a ser enviada, e é exatamente isso que essa função faz, trabalhando com ponteiros para que a mensagem de uplink seja construída.
+   #### Função Read_Sensor
+   Todo o segundo em que essa função for chamada, irá ocorrer a leitura da temperatura e umidade do ambiente. Além disso, esses dados serão mostrados no monitor serial. Uma função simples e opcional, que tem como maior propósito a organização do código, você pode realizar as leituras no próprio loop. 
+   
+   Após o esclarecimento das funções e funcionamento delas, podemos prosseguir para a próxima etapa.
+   
+ ## Terceiro passo: integração com a plataforma Tago
+ 
    
