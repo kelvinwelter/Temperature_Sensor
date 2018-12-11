@@ -1,5 +1,5 @@
 # Sensor de Temperatura e Umidade usando Nanofox IoT
-Nessa página iremos apresentar outra aplicação usando a placa Nanofox IoT, um pouco mais complexa que o Smart Buttom mas que ainda assim é possível realizar esse projeto sem menores problemas, se trata de um sensor de temperatura e humidade via Nanofox IoT!
+  Nessa página iremos apresentar outra aplicação usando a placa Nanofox IoT, um pouco mais complexa que o Smart Buttom mas que ainda assim é possível realizar esse projeto sem menores problemas, se trata de um sensor de temperatura e humidade via Nanofox IoT!
 
 ## Recomendações: 
 - [Arduino IDE instalada no computador.](https://www.arduino.cc/en/Guide/HomePage)
@@ -7,6 +7,31 @@ Nessa página iremos apresentar outra aplicação usando a placa Nanofox IoT, um
 - [Ativação do kit Nanofox IoT.](https://github.com/Gridya/NANOFOX-Activate/blob/master/README.md)
 - [Realizar o projeto Smart Buttom antes!](https://github.com/Gridya/nanofox/tree/master/examples/Smart_Buttom)
 - [Integração da plataforma Tago com o Backend Sigfox](https://tago.elevio.help/en/articles/33)
+- [Biblioteca Adafruit_HTU21DF instalada](https://github.com/adafruit/Adafruit_HTU21DF_Library/archive/master.zip)
 
 ## Aplicação do Projeto: 
-Esse projeto tem como principal objetivo mostrar como trabalhar com sensores usando Nanofox IoT, também será mostrado como tratar os dados desses sensores. A principal aplicação do projeto é a leitura da temperatura e umidade em .................
+  Esse projeto tem como principal objetivo mostrar como trabalhar com sensores usando Nanofox IoT, também será mostrado como tratar os dados desses sensores. A principal aplicação do projeto é a leitura da temperatura e umidade em um ambiente para então transmitir esses dados para a plataforma Tago através da rede Sigfox.
+
+## Resumo do projeto: 
+  O projeto será dividido nas seguintes partes:
+- Desenvolvimento do circuito eletrônico: onde toda a parte de hardware será montada e deixada pronta para as etapas seguintes.
+- Programação do firmware: através da programação do firmware que iremos estabelecer toda a lógica por trás do projeto.
+- Integração com a plataforma Tago: precisamos fazer alguns acertos para que nossos dados sejam recebidos de forma correta na Tago, essa etapa se encarrega disso.
+- Visualização dos dados com a plataforma Tago: após tudo estar pronto, podemos partir para a melhor visualização de nossos dados na dashboard da Tago.
+
+## Primeiro passo: desenvolvimento do circuito eletrônico
+  Para realizarmos as medições de temperatura e umidade vamos utilizar o sensor HTU21D. Esse sensor, compacto mas que ainda assim é preciso, é muito simples de se usar. Tendo apenas que conectar seus 4 pinos na placa Nanofox IoT conforme o esquemático:
+
+   ESQUEMÁTICO AQUI
+   
+  Após realizarmos as devidas conexões, nossa placa Nanofox IoT já está pronta para ser programada. A parte física do nosso projeto deve ficar conforme a imagem abaixo, se estiver tudo de acordo prossiga para a próxima etapa:
+
+  IMAGEM DO PROJETO AQUI
+  
+## Segundo passo: programação do Arduino (Firmware)
+  Após termos concluído a parte do hardware, iremos para a programação. O código fonte do projeto está disponibilizado nesse repositório, aqui iremos apenas realizar a explicações de alguns trechos de maior importância:
+  #### Bibliotecas necessárias
+   Para esse projeto, serão necessárias apenas as bibliotecas [Adafruit_HTU21DF](https://github.com/adafruit/Adafruit_HTU21DF_Library/archive/master.zip) e [Nanofox](https://github.com/Gridya/nanofox). Sem a biblioteca Adafruit_HTU21DF não conseguiríamos realizar as leituras do nossso sensor e sem a biblioteca Nanofox não conseguiriamos trasmitir nossos dados.
+   #### Função Setup
+   Em nosso setup, realizamos todas as inicializações necessárias, que vão desde o Arduino Nano IO até as referências de tempo que serão usadas mais tarde. Além disso, também programamos algumas mensagens para serem exibidas no monitor serial (também inicializado na função).
+   
