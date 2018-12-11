@@ -44,5 +44,6 @@
    Após o esclarecimento das funções e funcionamento delas, podemos prosseguir para a próxima etapa.
    
  ## Terceiro passo: integração com a plataforma Tago
+ Lembra-se da função Build_Uplink_Msg? Aquela função é essencial para que agora realizemos a integração com a plataforma Tago. Os dados foram enviados para a plataforma, mas estão todos na forma de hexadecimais e de forma conjunta. Precisamos analisar, organizar e separar esses dados. Para isso iremos usar a ferramenta de scripts da Tago, lá iremos realizar todo o procedimento necessário.
  
    
