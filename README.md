@@ -26,7 +26,7 @@
    
   Após realizarmos as devidas conexões, nossa placa Nanofox IoT já está pronta para ser programada. A parte física do nosso projeto deve ficar conforme a imagem abaixo, se estiver tudo de acordo prossiga para a próxima etapa:
 
-  IMAGEM DO PROJETO AQUI
+  [![sensor-temperatura.jpg](https://i.postimg.cc/zDbcgTXV/sensor-temperatura.jpg)](https://postimg.cc/4nGPC7cg "Nanofox IoT conectado ao sensor de temperatura e umidade")
   
 ## Segundo passo: programação do Arduino (Firmware)
   Após termos concluído a parte do hardware, iremos para a programação. O código fonte do projeto está disponibilizado nesse repositório, aqui iremos apenas realizar a explicações de alguns trechos de maior importância:
