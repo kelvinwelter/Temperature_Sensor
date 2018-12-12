@@ -26,7 +26,7 @@
    
   A montagem é muito simples, com somente 4 pinos para conectar, as chances de algo dar errado são mínimas. Porém, mantenha a atenção, não troque os pinos SDA e SCL de lugar, eles devem ser conectados conforme o esquemático já que o sensor é um dispositivo I²C.
 
-  [![sensor-temperatura.jpg](https://i.postimg.cc/zDbcgTXV/sensor-temperatura.jpg)](https://postimg.cc/4nGPC7cg "Nanofox IoT conectado ao sensor de temperatura e umidade")
+[![IMG-20181212-162751.jpg](https://i.postimg.cc/wMKbPpsJ/IMG-20181212-162751.jpg)](https://postimg.cc/WFnnFx8b)
   
   Após realizarmos as devidas conexões, nossa placa Nanofox IoT já está pronta para ser programada. A parte física do nosso projeto deve ficar conforme a imagem abaixo, se estiver tudo de acordo prossiga para a próxima etapa:
   
