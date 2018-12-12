@@ -1,0 +1,44 @@
+[{
+    "variable": "device",
+    "value": "{device}",
+    "serie": "{time}"
+},{
+    "variable": "duplicate",
+    "value": "{duplicate}",
+    "serie": "{time}"
+},{
+    "variable": "snr",
+    "value": "{snr}",
+    "serie": "{time}"
+},{
+    "variable": "rssi",
+    "value": "{rssi}",
+    "serie": "{time}"
+},{
+    "variable": "avgSnr",
+    "value": "{avgSnr}",
+    "serie":"{time}"
+},{
+    "variable": "station",
+    "value": "{station}",
+    "serie": "{time}"
+},{
+    "variable": "data",
+    "value": "{data}",
+    "serie": "{time}"
+},{
+    "variable": "seqNumber",
+    "value": "{seqNumber}",
+    "serie": "{time}"
+},{
+  "variable": "temperature_N",
+  "value": "{customData#temperature_N}", 
+  "serie": "{time}"
+},{
+  "variable": "humidity",
+  "value": "{customData#humidity}", 
+  "serie": "{time}"
+},{
+    "variable": "location",
+    "serie": "{time}"
+}]
