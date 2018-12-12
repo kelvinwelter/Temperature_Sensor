@@ -90,6 +90,12 @@
  
  [![custom-callback.png](https://i.postimg.cc/qq2WBYxn/custom-callback.png)](https://postimg.cc/2L8020J8)
  
+ Além disso, devemos fazer algumas alterações na aplicação JSON do **Uplink** para incluir a temperatura e umidade, conforme a imagem abaixo. O código completo a se colocar na aplicação do **Uplink** está disponibilizado nesse repositório também, procure pelo arquivo callback_application.
+ 
+ [![application-json.png](https://i.postimg.cc/Nfcj8vV3/application-json.png)](https://postimg.cc/vD0yMkGh)
+ 
+ Após essas alterações no Sigfox Backend, iremos criar uma análise na plataforma Tago para deixar esses dados com suas respectivas unidades e valores originais. Para isso, crie uma análise.........
+ 
  ## Quarto passo: melhorando a visualização dos dados
  Para melhorarmos a visualização dos dados iremos trabalhar com a criação de widgets na plataforma Tago. A Tago proporciona ferramentas para visualização dos dados que podem ser criadas de forma prática e ágil. Assim, vamos criar na nossa dashboard os seguintes widgets: 
    
