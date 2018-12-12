@@ -21,8 +21,8 @@
 
 ## Primeiro passo: desenvolvimento do circuito eletrônico
   Para realizarmos as medições de temperatura e umidade vamos utilizar o sensor HTU21D. Esse sensor, compacto mas que ainda assim é preciso, é muito simples de se usar. Tendo apenas que conectar seus 4 pinos na placa Nanofox IoT conforme o esquemático:
-
-   ESQUEMÁTICO AQUI
+  
+  [![esquematico-temperature-sensor.png](https://i.postimg.cc/445fwgw9/esquematico-temperature-sensor.png)](https://postimg.cc/9zDHFs6m)
    
   Após realizarmos as devidas conexões, nossa placa Nanofox IoT já está pronta para ser programada. A parte física do nosso projeto deve ficar conforme a imagem abaixo, se estiver tudo de acordo prossiga para a próxima etapa:
 
