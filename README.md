@@ -48,4 +48,6 @@
  ## Terceiro passo: integração com a plataforma Tago
  Lembra-se da função Build_Uplink_Msg? Aquela função é essencial para que agora realizemos a integração com a plataforma Tago. Os dados foram enviados para a plataforma, mas estão todos na forma de hexadecimais e de forma conjunta. Precisamos analisar, organizar e separar esses dados. Para isso iremos usar a ferramenta de scripts da Tago, lá iremos realizar todo o procedimento necessário.
  
+ ## Quarto passo: melhorando a visualização dos dados
+ Para melhorarmos a visualização dos dados iremos trabalhar com a criação de widgets na plataforma Tago. A Tago proporciona ferramentas para visualização dos dados que podem ser criadas de forma prática e ágil. Assim, vamos criar na nossa dashboard os seguintes widgets: 
    
