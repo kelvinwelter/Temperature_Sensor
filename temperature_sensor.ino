@@ -53,7 +53,7 @@ void loop() {
   }
   
   //Periodically send data to Sigfox
-  if((millis() - timeref_per_ms) > ((10000)*1)){ 
+  if((millis() - timeref_per_ms) > ((60000)*15)){ 
     Serial.println("Enviando dados");
     timeref_per_ms = millis(); //restart time reference
     Build_Uplink_Msg();
