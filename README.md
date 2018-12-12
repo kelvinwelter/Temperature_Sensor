@@ -117,5 +117,21 @@
  Se tudo funcionou corretamente, podemos ir para o próximo e último passo, construir uma dashboard!
  
  ## Quarto passo: melhorando a visualização dos dados
- Para melhorarmos a visualização dos dados iremos trabalhar com a criação de widgets na plataforma Tago. A Tago proporciona ferramentas para visualização dos dados que podem ser criadas de forma prática e ágil. Assim, vamos criar na nossa dashboard os seguintes widgets: 
+ Para melhorarmos a visualização dos dados iremos trabalhar com a criação de widgets na plataforma Tago. A Tago proporciona ferramentas para visualização dos dados que podem ser criadas de forma prática e ágil. Vamos começar criando uma nova Dashboard, para fazer isso, basta clicar em **Add Dashboard**, na aba **Dashboards**, escolher um nome e um ícone caso queira. Após a dashboard ser criada, vamos criar alguns widgets:
+ ### Gráficos
+ Começando pelos gráficos (**Charts na tago.io**), podemos escolher os mais diversos tipos de gráficos e customizar vários aspectos. Em nosso projeto, queremos um monitoramento detalhado da temperatura e umidade, assim, criaremos um gráfico para cada um desses dados. Para criar o gráfico, basta escolher as variáveis que você deseja plotar e então, realizar algumas configurações adicionais na aba **Parameter Configuration**. Com as devidas configurações feitas, nossos gráficos ficaram assim:
+ 
+ [![graficos.png](https://i.postimg.cc/hGpySmQS/graficos.png)](https://postimg.cc/hJQbsf0w)
+ 
+ ### Icons
+ Outro widget que colocamos em nosso projeto é o widget **Icons**, esse widget em nosso caso foi usado para mostrar a última leitura de temperatura e umidade coletada e enviada para a rede Tago. Assim, configurando para mostrar as unidades e escolhendo ícones de sua preferência, o widget ficou conforme a imagem: 
+ 
+ [![icons.png](https://i.postimg.cc/XqT9jjgN/icons.png)](https://postimg.cc/m1yPVGqK)
+ 
+ ### Outras formas de representação de dados
+ Como você já deve ter visto, a plataforma Tago disponibiliza os mais diversos widgets para você criar uma dashboard do seu jeito. A nossa ficou assim:
+ 
+ [![analise.png](https://i.postimg.cc/4x5k9mH0/analise.png)](https://postimg.cc/68yms60V)
+ 
+ Mas não se prenda somente a nossa dashboard, explore outros widgets e libere sua criatividade, comece dando uma olhada nesse [artigo explicando os widgets da TagoIO](https://tago.elevio.help/en/categories/9-widgets). A plataforma Tago tem ferramentas poderosas e saber usá-la da melhor forma possível é um grande diferencial em sua jornada Nanofox IoT. Parabéns por desenvolver esse projeto! Agora você já pode aplicar seus conhecimentos em outros tipos de sensores para captação de dados além de saber como representá-los da melhor maneira possível na Tago.io! Acompanhe a Gridya nas redes sociais e fique ligado nos próximos exemplos que serão lançados!
    
