@@ -1,0 +1,44 @@
+const TagoAnalysis = require('tago/analysis');
+const TagoDevice = require('tago/device');
+const TagoUtils = require('tago/utils');
+const TagoAccount = require('tago/account');
+
+async function parse(context, scope) {
+  context.log('Running');
+  if (!scope[0]) return context.log('no scope');
+  const environment = TagoUtils.env_to_obj(context.environment);
+  if (!environment.account_token) return context.log('Missing account_token environment var');
+
+  const temperature_n = scope.find(x => x.variable === 'temperature_n');
+  const humidity = scope.find(x => x.variable === 'humidity');
+  if (!temperature_n || !humidity) return context.log('device variables does not exists');
+
+  const account = new TagoAccount(environment.account_token);
+  const token = await TagoUtils.getTokenByName(account, temperature_n.origin, ['Default', 'Generic', 'Token #1', 'Token #2']);
+  const device = new TagoDevice(token);
+
+  const time = temperature_n.time ? temperature_n.time : new Date().toISOString();
+  const serie = temperature_n.serie ? temperature_n.serie : new Date().getTime();
+
+  const temp_value = Number(Number(temperature_n.value) / 100).toFixed(2);
+  const humidity_value = Number(Number(humidity.value) / 100).toFixed(2);
+
+  const datatotago = [{
+    variable: 'temperature_parsed',
+    value: Number(temp_value),
+    time,
+    serie,
+    unit: '°C',
+  }, {
+    variable: 'humidity_parsed',
+    value: Number(humidity_value),
+    time,
+    serie,
+    unit: '%',
+  }];
+
+  await device.insert(datatotago).then(context.log).catch(context.log);
+  context.log('parse has been finished!');
+}
+
+module.exports = new TagoAnalysis(parse, '9b22e530-9216-11e6-b97b-6f4c87e82ec2');
