@@ -90,11 +90,31 @@
  
  [![custom-callback.png](https://i.postimg.cc/qq2WBYxn/custom-callback.png)](https://postimg.cc/2L8020J8)
  
- Além disso, devemos fazer algumas alterações na aplicação JSON do **Uplink** para incluir a temperatura e umidade, conforme a imagem abaixo. O código completo a se colocar na aplicação do **Uplink** está disponibilizado nesse repositório também, procure pelo arquivo callback_application.
+ Além disso, devemos fazer algumas alterações na aplicação JSON do **Uplink** para incluir a temperatura e umidade, conforme a imagem abaixo. O código completo a se colocar na aplicação do **Uplink** está disponibilizado nesse repositório também, procure pelo arquivo **callback_application**.
  
  [![application-json.png](https://i.postimg.cc/Nfcj8vV3/application-json.png)](https://postimg.cc/vD0yMkGh)
  
- Após essas alterações no Sigfox Backend, iremos criar uma análise na plataforma Tago para deixar esses dados com suas respectivas unidades e valores originais. Para isso, crie uma análise.........
+ Após essas alterações no Sigfox Backend, iremos criar uma análise na plataforma Tago para deixar esses dados com suas respectivas unidades e valores originais. Para isso, crie uma análise na plataforma Tago e preencha a aba **General Information** com o nome que deseja, além das outras opções que devem ficar como a imagem a seguir:
+ 
+ [![general-information.png](https://i.postimg.cc/vT7mpGD6/general-information.png)](https://postimg.cc/YL9kFK6p)
+ 
+ Após isso, copie e cole na aba **Script** o código para processar a temperatura e umidade (dividir por 100 e colocar as respectivas unidades). Esse código está disponibilizado nesse repositório, procure por **nanofox_parser**. Após colocar o código na aba **Script**, entre na aba **Environment Variables**, lá você deve criar uma variável de nome **account_token** e colocar o token de sua conta (Pode ser encontrado em My Account -> Tokens). Dessa forma, sua aba **Environment Variables** deve ficar assim:
+ 
+ [![account-token.png](https://i.postimg.cc/15P04tG2/account-token.png)](https://postimg.cc/PN3vRdFQ)
+ 
+ Pronto! Fazendo tudo conforme descrito, salve sua análise. Agora vamos criar uma **Action** para que essa análise entre em ação sempre que a plataforma Tago receber dados da rede Sigfox. Na aba **Actions** clique no botão **Add Action**. Assim, você entrará na aba **General Information** de uma nova action. Dentro dessa aba, preencha com o nome da action, escolha ação a ser tomada como **Run Analysis** e então escolha a análise que você criou agora há pouco, sua tela deve ficar parecida com a imagem a seguir:
+ 
+ [![action.png](https://i.postimg.cc/zfjYZ3kN/action.png)](https://postimg.cc/wt7GDqP4)
+ 
+ Agora na aba **Trigger**, selecione as seguintes opções conforme os destaques da imagem a seguir e sua ação estará pronta para ser salva e usada!
+ 
+ [![trigger.png](https://i.postimg.cc/sxGLX25v/trigger.png)](https://postimg.cc/xNY5pnx2)
+ 
+ Feito isso, seus dados já estarão chegando na plataforma Tago e sendo processados de volta para como devem ser mostrados. Se tudo estiver funcionando, você pode transmitir dados para a plataforma, acessar o bucket para onde seus dados estão indo e lá você encontrará as seguintes variáveis e suas respectivas unidades:
+ 
+ [![variaveis.png](https://i.postimg.cc/kMWZk2Mp/variaveis.png)](https://postimg.cc/2382W8ZQ)
+ 
+ Se tudo funcionou corretamente, podemos ir para o próximo e último passo, construir uma dashboard!
  
  ## Quarto passo: melhorando a visualização dos dados
  Para melhorarmos a visualização dos dados iremos trabalhar com a criação de widgets na plataforma Tago. A Tago proporciona ferramentas para visualização dos dados que podem ser criadas de forma prática e ágil. Assim, vamos criar na nossa dashboard os seguintes widgets: 
