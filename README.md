@@ -106,7 +106,7 @@
  
  [![action.png](https://i.postimg.cc/zfjYZ3kN/action.png)](https://postimg.cc/wt7GDqP4)
  
- Agora na aba **Trigger**, selecione as seguintes opções conforme os destaques da imagem a seguir e sua ação estará pronta para ser salva e usada!
+ Agora na aba **Trigger**, escolha a variável **data** do seu device e também selecione as seguintes opções conforme os destaques da imagem a seguir e sua ação estará pronta para ser salva e usada!
  
  [![trigger.png](https://i.postimg.cc/sxGLX25v/trigger.png)](https://postimg.cc/xNY5pnx2)
  
