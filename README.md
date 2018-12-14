@@ -104,15 +104,15 @@
  
  Pronto! Fazendo tudo conforme descrito, salve sua análise. Agora vamos criar uma **Action** para que essa análise entre em ação sempre que a plataforma Tago receber dados da rede Sigfox. Na aba **Actions** clique no botão **Add Action**. Assim, você entrará na aba **General Information** de uma nova action. Dentro dessa aba, preencha com o nome da action, escolha ação a ser tomada como **Run Analysis** e então escolha a análise que você criou agora há pouco, sua tela deve ficar parecida com a imagem a seguir:
  
- [![action.png](https://i.postimg.cc/zfjYZ3kN/action.png)](https://postimg.cc/wt7GDqP4)
+ [![action.png](https://i.postimg.cc/zfjYZ3kN/action.png)](https://postimg.cc/wt7GDqP4 "Configuração da aba General Information da action")
  
  Agora na aba **Trigger**, escolha a variável **data** do seu device e também selecione as seguintes opções conforme os destaques da imagem a seguir e sua ação estará pronta para ser salva e usada!
  
- [![trigger.png](https://i.postimg.cc/sxGLX25v/trigger.png)](https://postimg.cc/xNY5pnx2)
+ [![trigger.png](https://i.postimg.cc/sxGLX25v/trigger.png)](https://postimg.cc/xNY5pnx2 "Configuração da aba Trigger da action")
  
  Feito isso, seus dados já estarão chegando na plataforma Tago e sendo processados de volta para como devem ser mostrados. Se tudo estiver funcionando, você pode transmitir dados para a plataforma, acessar o bucket para onde seus dados estão indo e lá você encontrará as seguintes variáveis e suas respectivas unidades:
  
- [![variaveis.png](https://i.postimg.cc/kMWZk2Mp/variaveis.png)](https://postimg.cc/2382W8ZQ)
+ [![variaveis.png](https://i.postimg.cc/kMWZk2Mp/variaveis.png)](https://postimg.cc/2382W8ZQ "Variáveis provenientes da análise")
  
  Se tudo funcionou corretamente, podemos ir para o próximo e último passo, construir uma dashboard!
  
@@ -121,17 +121,17 @@
  ### Gráficos
  Começando pelos gráficos (**Charts na tago.io**), podemos escolher os mais diversos tipos de gráficos e customizar vários aspectos. Em nosso projeto, queremos um monitoramento detalhado da temperatura e umidade, assim, criaremos um gráfico para cada um desses dados. Para criar o gráfico, basta escolher as variáveis que você deseja plotar e então, realizar algumas configurações adicionais na aba **Parameter Configuration**. Com as devidas configurações feitas, nossos gráficos ficaram assim:
  
- [![graficos.png](https://i.postimg.cc/hGpySmQS/graficos.png)](https://postimg.cc/hJQbsf0w)
+ [![graficos.png](https://i.postimg.cc/hGpySmQS/graficos.png)](https://postimg.cc/hJQbsf0w "Gráficos")
  
  ### Icons
  Outro widget que colocamos em nosso projeto é o **Icons**, essa ferramenta em nosso caso foi usado para mostrar a última leitura de temperatura e umidade coletada e enviada para a rede Tago. Assim, configurando para mostrar as unidades e escolhendo ícones de sua preferência, o widget ficou conforme a imagem: 
  
- [![icons.png](https://i.postimg.cc/XqT9jjgN/icons.png)](https://postimg.cc/m1yPVGqK)
+ [![icons.png](https://i.postimg.cc/XqT9jjgN/icons.png)](https://postimg.cc/m1yPVGqK "Widget Icons")
  
  ### Outras formas de representação de dados
  Como você já deve ter visto, a plataforma Tago disponibiliza os mais diversos widgets para você criar uma dashboard do seu jeito. A nossa ficou assim:
  
- [![analise.png](https://i.postimg.cc/4x5k9mH0/analise.png)](https://postimg.cc/68yms60V)
+ [![analise.png](https://i.postimg.cc/4x5k9mH0/analise.png)](https://postimg.cc/68yms60V "Dashboard criada")
  
  Mas não se prenda somente a nossa dashboard, explore outros widgets e libere sua criatividade, comece dando uma olhada nesse [artigo explicando os widgets da TagoIO](https://tago.elevio.help/en/categories/9-widgets). A plataforma Tago tem ferramentas poderosas e saber usá-la da melhor forma possível é um grande diferencial em sua jornada Nanofox IoT. Parabéns por desenvolver esse projeto! Agora você já pode aplicar seus conhecimentos em outros tipos de sensores para captação de dados além de saber como representá-los da melhor maneira possível na Tago.io! Acompanhe a Gridya nas redes sociais e fique ligado nos próximos exemplos que serão lançados!
    
