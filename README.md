@@ -15,7 +15,7 @@
 ## Resumo do projeto: 
   O projeto será dividido nas seguintes partes:
 - Desenvolvimento do circuito eletrônico: onde toda a parte de hardware será montada e deixada pronta para as etapas seguintes.
-- Programação do firmware: através da programação do firmware que iremos estabelecer toda a lógica por trás do projeto.
+- Programação do firmware: é através da programação no Arduino Nano IO que iremos estabelecer toda a lógica por trás do projeto.
 - Integração com a plataforma Tago: precisamos fazer alguns acertos para que nossos dados sejam recebidos de forma correta na Tago, essa etapa se encarrega disso.
 - Visualização dos dados com a plataforma Tago: após tudo estar pronto, podemos partir para a melhor visualização de nossos dados na dashboard da Tago.
 
