@@ -124,7 +124,7 @@
  [![graficos.png](https://i.postimg.cc/hGpySmQS/graficos.png)](https://postimg.cc/hJQbsf0w)
  
  ### Icons
- Outro widget que colocamos em nosso projeto é o widget **Icons**, esse widget em nosso caso foi usado para mostrar a última leitura de temperatura e umidade coletada e enviada para a rede Tago. Assim, configurando para mostrar as unidades e escolhendo ícones de sua preferência, o widget ficou conforme a imagem: 
+ Outro widget que colocamos em nosso projeto é o **Icons**, essa ferramenta em nosso caso foi usado para mostrar a última leitura de temperatura e umidade coletada e enviada para a rede Tago. Assim, configurando para mostrar as unidades e escolhendo ícones de sua preferência, o widget ficou conforme a imagem: 
  
  [![icons.png](https://i.postimg.cc/XqT9jjgN/icons.png)](https://postimg.cc/m1yPVGqK)
  
