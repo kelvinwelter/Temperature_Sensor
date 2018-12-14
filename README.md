@@ -1,5 +1,5 @@
 # Sensor de Temperatura e Umidade usando Nanofox IoT
-  Nessa página iremos apresentar outra aplicação usando a placa Nanofox IoT, um pouco mais complexa que o Smart Buttom mas que ainda assim é possível realizar esse projeto sem menores problemas, se trata de um sensor de temperatura e humidade via Nanofox IoT!
+  Nessa página iremos apresentar outra aplicação usando a placa Nanofox IoT, um pouco mais complexa que o Smart Buttom mas que ainda assim é possível realizar esse projeto sem menores problemas, se trata de um sensor de temperatura e umidade via Nanofox IoT!
 
 ## Recomendações: 
 - [Arduino IDE instalada no computador.](https://www.arduino.cc/en/Guide/HomePage)
