@@ -22,11 +22,11 @@
 ## Primeiro passo: desenvolvimento do circuito eletrônico
   Para realizarmos as medições de temperatura e umidade vamos utilizar o sensor HTU21D. Esse sensor, compacto mas que ainda assim é preciso, é muito simples de se usar. Tendo apenas que conectar seus 4 pinos na placa Nanofox IoT conforme o esquemático:
   
-  [![esquematico-temperature-sensor.png](https://i.postimg.cc/445fwgw9/esquematico-temperature-sensor.png)](https://postimg.cc/9zDHFs6m)
+  [![esquematico-temperature-sensor.png](https://i.postimg.cc/445fwgw9/esquematico-temperature-sensor.png)](https://postimg.cc/9zDHFs6m "Esquemático do Sensor de Temperatura")
    
   A montagem é muito simples, com somente 4 pinos para conectar, as chances de algo dar errado são mínimas. Porém, mantenha a atenção, não troque os pinos SDA e SCL de lugar, eles devem ser conectados conforme o esquemático já que o sensor é um dispositivo I²C.
 
-[![IMG-20181212-162751.jpg](https://i.postimg.cc/wMKbPpsJ/IMG-20181212-162751.jpg)](https://postimg.cc/WFnnFx8b)
+[![IMG-20181212-162751.jpg](https://i.postimg.cc/wMKbPpsJ/IMG-20181212-162751.jpg)](https://postimg.cc/WFnnFx8b "Resultado final da montagem")
   
   Após realizarmos as devidas conexões, nossa placa Nanofox IoT já está pronta para ser programada. A parte física do nosso projeto deve ficar conforme a imagem abaixo, se estiver tudo de acordo prossiga para a próxima etapa:
   
@@ -88,19 +88,19 @@
  ## Terceiro passo: integração com a plataforma Tago
  Lembra-se da função Build_Uplink_Msg? Aquela função é essencial para que agora realizemos a integração com a plataforma Tago. Os dados foram enviados para a plataforma, mas estão todos na forma de hexadecimais e de forma conjunta. Precisamos analisar, organizar e separar esses dados. Para isso iremos usar a ferramenta de scripts da Tago juntamente do uso de callbacks no Sigfox Backend. Primeiramente no Sigfox Backend devemos tratar os dados para que eles já cheguem como variável na Tago. Para isso, devemos estabelecer uma configuração para nossa payload como na imagem a seguir: 
  
- [![custom-callback.png](https://i.postimg.cc/qq2WBYxn/custom-callback.png)](https://postimg.cc/2L8020J8)
+ [![custom-callback.png](https://i.postimg.cc/qq2WBYxn/custom-callback.png)](https://postimg.cc/2L8020J8 "Custom Payload Configuration")
  
  Além disso, devemos fazer algumas alterações na aplicação JSON do **Uplink** para incluir a temperatura e umidade, conforme a imagem abaixo. O código completo a se colocar na aplicação do **Uplink** está disponibilizado nesse repositório também, procure pelo arquivo **callback_application**.
  
- [![application-json.png](https://i.postimg.cc/Nfcj8vV3/application-json.png)](https://postimg.cc/vD0yMkGh)
+ [![application-json.png](https://i.postimg.cc/Nfcj8vV3/application-json.png)](https://postimg.cc/vD0yMkGh "Código JSON no callback")
  
  Após essas alterações no Sigfox Backend, iremos criar uma análise na plataforma Tago para deixar esses dados com suas respectivas unidades e valores originais. Para isso, crie uma análise na plataforma Tago e preencha a aba **General Information** com o nome que deseja, além das outras opções que devem ficar como a imagem a seguir:
  
- [![general-information.png](https://i.postimg.cc/vT7mpGD6/general-information.png)](https://postimg.cc/YL9kFK6p)
+ [![general-information.png](https://i.postimg.cc/vT7mpGD6/general-information.png)](https://postimg.cc/YL9kFK6p "Configuração da aba General Information da Análise")
  
  Após isso, copie e cole na aba **Script** o código para processar a temperatura e umidade (dividir por 100 e colocar as respectivas unidades). Esse código está disponibilizado nesse repositório, procure por **nanofox_parser**. Após colocar o código na aba **Script**, entre na aba **Environment Variables**, lá você deve criar uma variável de nome **account_token** e colocar o token de sua conta (Pode ser encontrado em My Account -> Tokens). Dessa forma, sua aba **Environment Variables** deve ficar assim:
  
- [![account-token.png](https://i.postimg.cc/15P04tG2/account-token.png)](https://postimg.cc/PN3vRdFQ)
+ [![account-token.png](https://i.postimg.cc/15P04tG2/account-token.png)](https://postimg.cc/PN3vRdFQ "Configuração da aba Environment Variables da Análise")
  
  Pronto! Fazendo tudo conforme descrito, salve sua análise. Agora vamos criar uma **Action** para que essa análise entre em ação sempre que a plataforma Tago receber dados da rede Sigfox. Na aba **Actions** clique no botão **Add Action**. Assim, você entrará na aba **General Information** de uma nova action. Dentro dessa aba, preencha com o nome da action, escolha ação a ser tomada como **Run Analysis** e então escolha a análise que você criou agora há pouco, sua tela deve ficar parecida com a imagem a seguir:
  
