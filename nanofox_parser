@@ -17,13 +17,43 @@ async function parse(context, scope) {
   const token = await TagoUtils.getTokenByName(account, temperature_n.origin, ['Default', 'Generic', 'Token #1', 'Token #2']);
   const device = new TagoDevice(token);
 
+  const datatotago = [];
   const time = temperature_n.time ? temperature_n.time : new Date().toISOString();
   const serie = temperature_n.serie ? temperature_n.serie : new Date().getTime();
 
   const temp_value = Number(Number(temperature_n.value) / 100).toFixed(2);
   const humidity_value = Number(Number(humidity.value) / 100).toFixed(2);
 
-  const datatotago = [{
+  let alarm = '0';
+  if (temp_value >= 30) {
+    alarm = '1';
+    if (humidity_value >= 80) {
+      alarm = '3';
+    }
+  }
+  if (humidity_value >= 80) {
+    alarm = '2';
+  }
+  switch (String(alarm)) {
+    case '0':
+      datatotago.push({ variable: 'alarm', value: 'Temperatura e umidade normais', serie, time, metadata: { color: 'lightgreen' } });
+      context.log('Temperatura e umidade normais');
+      break;
+    case '1':
+      datatotago.push({ variable: 'alarm', value: 'Temperatura acima do limite', serie, time, metadata: { color: 'pink' } });
+      break;
+    case '2':
+      datatotago.push({ variable: 'alarm', value: 'Umidade acima do limite', serie, time, metadata: { color: 'pink' } });
+      break;
+    case '3':
+      datatotago.push({ variable: 'alarm', value: 'Temperatura e umidade acima do limite', serie, time, metadata: { color: 'pink' } });
+      break;
+    default:
+      console.log('Não foi possível conferir o limite de temperatura e umidade');
+      break;
+  }
+
+  datatotago.push({
     variable: 'temperature_parsed',
     value: Number(temp_value),
     time,
@@ -35,7 +65,7 @@ async function parse(context, scope) {
     time,
     serie,
     unit: '%',
-  }];
+  });
 
   await device.insert(datatotago).then(context.log).catch(context.log);
   context.log('parse has been finished!');
