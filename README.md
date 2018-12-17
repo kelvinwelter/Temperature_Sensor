@@ -121,7 +121,7 @@
  ### Gráficos
  Começando pelos gráficos (**Charts na tago.io**), podemos escolher os mais diversos tipos de gráficos e customizar vários aspectos. Em nosso projeto, queremos um monitoramento detalhado da temperatura e umidade, assim, criaremos um gráfico para cada um desses dados. Para criar o gráfico, basta escolher as variáveis que você deseja plotar e então, realizar algumas configurações adicionais na aba **Parameter Configuration**. Com as devidas configurações feitas, nossos gráficos ficaram assim:
  
- [![graficos.png](https://i.postimg.cc/hGpySmQS/graficos.png)](https://postimg.cc/hJQbsf0w "Gráficos")
+ [![graficos.png](https://i.postimg.cc/cH8GPGj2/graficos.png)](https://postimg.cc/TLGsWFTJ)
  
  ### Icons
  Outro widget que colocamos em nosso projeto é o **Icons**, essa ferramenta em nosso caso foi usado para mostrar a última leitura de temperatura e umidade coletada e enviada para a rede Tago. Assim, configurando para mostrar as unidades e escolhendo ícones de sua preferência, o widget ficou conforme a imagem: 
