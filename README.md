@@ -121,17 +121,21 @@
  ### Gráficos
  Começando pelos gráficos (**Charts na tago.io**), podemos escolher os mais diversos tipos de gráficos e customizar vários aspectos. Em nosso projeto, queremos um monitoramento detalhado da temperatura e umidade, assim, criaremos um gráfico para cada um desses dados. Para criar o gráfico, basta escolher as variáveis que você deseja plotar e então, realizar algumas configurações adicionais na aba **Parameter Configuration**. Com as devidas configurações feitas, nossos gráficos ficaram assim:
  
- [![graficos.png](https://i.postimg.cc/cH8GPGj2/graficos.png)](https://postimg.cc/TLGsWFTJ)
+ [![graficos.png](https://i.postimg.cc/cH8GPGj2/graficos.png)](https://postimg.cc/TLGsWFTJ "Gráficos para histórico de temperatura e umidade")
  
  ### Icons
- Outro widget que colocamos em nosso projeto é o **Icons**, essa ferramenta em nosso caso foi usado para mostrar a última leitura de temperatura e umidade coletada e enviada para a rede Tago. Assim, configurando para mostrar as unidades e escolhendo ícones de sua preferência, o widget ficou conforme a imagem: 
+ Outro widget que colocamos em nosso projeto é o **Icons**, essa ferramenta em nosso caso foi usado para duas aplicações: 
+ - Mostrar a leitura mais recente de temperatura e umidade coletada e enviada para a rede Tago. 
+ - Alertar sobre os níveis de temperatura e umidade caso estes estejam além dos limites, caso o contrário, será informado ao usuário que todas as condições estão dentro do limite de aceitação. Em nosso projeto, os limites de aceitação impostos foram: temperatura maior ou igual a 30°C e umidade maior ou igual a 80%.
+ Assim, colocamos imagens dinâmicas para a parte do alerta. Caso esteja tudo normal, um ícone simbolizando isso aparecerá e caso o contrário, será mostrado um ícone de alerta. É importante lembrar que isso tudo foi feito juntamente dos scripts na parte de Analysis da Tago, assim, o leitor deve estar ciente da importância em ter domínio dessa ferramente na plataforma Tago. 
+ Junto do nosso alerta, colocamos as últimas constatações de temperatura e umidade, selecionando um ícone para cada um desses dados e suas respectivas unidades. Após toda a montagem desse widget, tivemos o seguinte resultado: 
  
- [![icons.png](https://i.postimg.cc/XqT9jjgN/icons.png)](https://postimg.cc/m1yPVGqK "Widget Icons")
+ [![alerta.png](https://i.postimg.cc/NF593FYY/alerta.png)](https://postimg.cc/q6HvnkzZ "Widget para alertas e constatações dos dados")
  
  ### Outras formas de representação de dados
- Como você já deve ter visto, a plataforma Tago disponibiliza os mais diversos widgets para você criar uma dashboard do seu jeito. A nossa ficou assim:
+ Como você já deve ter visto, a plataforma Tago disponibiliza os mais diversos widgets para você criar uma dashboard do seu jeito. Visando o monitoramento dos limites de temperatura e umidade, histórico e últimas constatações de ambos os dados, nossa dashboard ficou da seguinte maneira: 
  
- [![analise.png](https://i.postimg.cc/4x5k9mH0/analise.png)](https://postimg.cc/68yms60V "Dashboard criada")
+ [![dashboard.png](https://i.postimg.cc/HnyW0ydJ/dashboard.png)](https://postimg.cc/tn9Hp71y "Dashboard criada em nosso projeto")
  
  Mas não se prenda somente a nossa dashboard, explore outros widgets e libere sua criatividade, comece dando uma olhada nesse [artigo explicando os widgets da TagoIO](https://tago.elevio.help/en/categories/9-widgets). A plataforma Tago tem ferramentas poderosas e saber usá-la da melhor forma possível é um grande diferencial em sua jornada Nanofox IoT. Parabéns por desenvolver esse projeto! Agora você já pode aplicar seus conhecimentos em outros tipos de sensores para captação de dados além de saber como representá-los da melhor maneira possível na Tago.io! Acompanhe a Gridya nas redes sociais e fique ligado nos próximos exemplos que serão lançados!
    
